@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="triggle">触发</button>
+</body>
+<script src="./main.js"></script>
+<script>
+    console.log(listener)
+    //监听start事件
+    listener.on('start',function(){
+        alert('start 执行');
+    });
+    var but = document.getElementById('triggle');
+    but.onclick = function(){
+        listener.trigger('start');
+    }
+</script>-
+</html>
